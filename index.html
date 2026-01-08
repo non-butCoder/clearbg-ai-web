@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ClearBG AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <h1>ClearBG AI</h1>
+    <p>Upload image → background removed automatically</p>
+
+    <!-- API KEY INPUT -->
+    <div class="api-box">
+      <input
+        type="password"
+        id="apiKey"
+        placeholder="Enter your Google Gemini API key"
+      />
+    </div>
+
+    <!-- IMAGE UPLOAD -->
+    <input type="file" id="imageInput" accept="image/*" />
+
+    <!-- COLOR PICKER -->
+    <div class="colors">
+      <button data-color="#007bff" class="active">Blue</button>
+      <button data-color="#87ceeb">Sky Blue</button>
+      <button data-color="#ff0000">Red</button>
+      <button data-color="#800080">Purple</button>
+      <button data-color="#ffffff">White</button>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+      <button id="downloadBtn" disabled>Download Image</button>
+    </div>
+
+    <p class="note">
+      ⚠️ Your API key is used only in your browser and never stored.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
